@@ -45,6 +45,6 @@ jobs:
           fi
 
           echo "Pushing to Gitee..."
-          git push --force-with-lease gitee data:data
+          GIT_TRACE=1 GIT_CURL_VERBOSE=1 git push --force-with-lease gitee data:data
 
           echo "Sync completed."
